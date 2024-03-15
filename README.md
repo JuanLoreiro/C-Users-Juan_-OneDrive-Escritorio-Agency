@@ -40,3 +40,58 @@ The selected code is part of a function called elixir that is used to generate a
 
 The code also includes a call to defmacro __using__(_opts), which is a special function used to define a macro that is automatically imported into the module where it is defined. In this case, the macro is used to import the contents of the current module (unquote(MODULE)) into the importing module.
 
+CSS stylesheet that defines styles for a webpage. Here is a clear and concise explanation of the code:
+
+The code imports two external stylesheets: one for the 'Inter' font and another for Bootstrap icons.
+It defines some CSS variables for colors and font families using the :root pseudo-class.
+
+Now for the JavaScript:
+const addClass = document.getElementById("addClass");
+const menu = document.querySelector(".menu");
+menu.addEventListener("click", () => {
+    if (addClass.style.display === "none") {
+        addClass.style.display = "block";
+    } else {
+        addClass.style.display = "none";
+
+    }
+});
+
+// // on scroll sticky with animation
+const header = document.querySelector(".page-header");
+const toggleClass = "is-sticky";
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 150) {
+        header.classList.add(toggleClass);
+    } else {
+        header.classList.remove(toggleClass);
+    }
+});
+
+This code snippet consists of two main parts:
+
+Toggling a CSS class on click:
+
+The code first retrieves an element with the ID "addClass" and a menu element with the class "menu".
+An event listener is added to the menu element for a click event.
+When the menu is clicked, it checks the current display style of the element with the ID "addClass".
+If the display style is "none", it changes it to "block"; otherwise, it changes it back to "none". This essentially toggles the visibility of the element on each click.
+Sticky header on scroll with animation:
+
+It selects an element with the class "page-header" and assigns the class name "is-sticky" to the variable toggleClass.
+Another event listener is added to the window for the scroll event.
+When the user scrolls, it checks the current vertical scroll position using window.pageYOffset.
+If the current scroll position is greater than 150 pixels, it adds the class "is-sticky" to the header element. This class likely contains CSS rules to make the header sticky.
+If the scroll position is less than or equal to 150 pixels, it removes the "is-sticky" class, reverting the header to its normal state.
+In summary, the first part toggles the visibility of an element on click, while the second part implements a sticky header effect with animation on scroll.
+Sets default styles for all elements to have no margin, padding, and a border-box box-sizing.
+Styles the body to use the 'Inter' font family and sets the background color.
+Defines styles for headings, paragraphs, and some general CSS classes for margins, paddings, font sizes, and text colors.
+Defines styles for a sticky page header with animation.
+Styles the header, logo, navigation menu, and navigation icon.
+Defines styles for different sections of the webpage, including background images, text, and social media links.
+Includes media queries for responsiveness, adjusting font sizes and layout for different screen sizes.
+Overall, the code sets up a clean and modern design for a webpage with a focus on typography and layout responsiveness.
+
